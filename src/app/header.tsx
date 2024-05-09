@@ -33,8 +33,8 @@ const Header = () => {
   };
   return (
     <>
-      <AppBar position="fixed" color="primary" sx={{ top: 0, bottom: 'auto', backgroundColor: "#6495ED", textAlign: "center", height: "30px" }}>
-        <Toolbar sx={{ position: "fixed", left: 0, top: 0, right: 0, backgroundColor: "#6495ED", fontFamily: "Inter", fontWeight: 400, fontSize: "5px", display: "flex", justifyContent: "left", minHeight: "30px" }}>
+      <AppBar position="fixed" color="primary" sx={{ top: 0, bottom: 'auto', backgroundColor: "#00A36C", textAlign: "center", height: "30px" }}>
+        <Toolbar sx={{ position: "fixed", left: 0, top: 0, right: 0, backgroundColor: "#00A36C", fontFamily: "Inter", fontWeight: 400, fontSize: "5px", display: "flex", justifyContent: "left", minHeight: "30px" }}>
           <Typography variant="body2" align="right" sx={{ color: "#00ff00", fontWeight: "bold", fontSize: "20px" }}>
             <ImportContactsIcon sx={{ color: "#00ff00", fontSize: "50px" }} /> <span style={{ color: "#00ff00", fontSize: "30px" }}>Knowledge</span> <span style={{ color: "#ffffff", fontWeight: "bold", textShadow: "1px 1px 2px black", fontSize: "30px" }}>Hub</span>
           </Typography>
