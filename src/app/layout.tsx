@@ -5,6 +5,7 @@ import Header from "./header";
 import Footer from "./footer";  
 import Container from "./container";
 import { ReduxProvider } from "@/redux/provider";
+import NavBar from "./core/navbar";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -18,6 +19,7 @@ export default function RootLayout({
 }: Readonly<{
   children: React.ReactNode;
 }>) {
+  
   return (
     <html lang="en">
       <body className={`${inter.className}`} style={{ margin: 0 }}>
