@@ -8,13 +8,13 @@ import {
   Menu,
   MenuItem,
   Avatar,
-} from "@mui/material"; 
+} from "@mui/material";
 import { Url } from "next/dist/shared/lib/router/router";
 import { useRouter } from "next/navigation";
 import { useAppSelector } from "@/redux/store";
 
 function NavBar() {
-  const userName= useAppSelector((state) => state.authReducer.value.username); 
+  const userName = useAppSelector((state) => state.authReducer.value.username);
   const router = useRouter();
   const [value, setValue] = useState(0);
   const [anchorEl, setAnchorEl] = useState(null);
@@ -23,7 +23,7 @@ function NavBar() {
     setValue(newValue);
   };
 
-  const handleMenuClick = (event: { currentTarget: React.SetStateAction<null>; }) => {
+  const handleMenuClick = (event: { currentTarget: React.SetStateAction<null> }) => {
     setAnchorEl(event.currentTarget);
   };
 
@@ -32,7 +32,7 @@ function NavBar() {
   };
 
   const handleMenuItemClick = (route: Url) => {
-   // router.push(route);
+    // router.push(route);
     handleMenuClose();
   };
 
@@ -41,7 +41,7 @@ function NavBar() {
   };
 
   return (
-    <AppBar position="fixed" color="primary" sx={{ top: 64, backgroundColor: "#2AAA8A"}}>
+    <AppBar position="fixed" color="primary" sx={{ top: 64, backgroundColor: "#2AAA8A" }}>
       <Toolbar>
         {/* App Name/Logo */}
         {userName && (
@@ -52,17 +52,58 @@ function NavBar() {
         </Typography>
 
         {/* Tabs for navigation */}
-        <Tabs value={value} onChange={handleChange}>
-          <Tab label="Home" onClick={() => router.push("/home")} />
-          <Tab label="About" onClick={() => router.push("/about")} />
+        <Tabs
+          value={value}
+          onChange={handleChange} 
+          TabIndicatorProps={{
+            style: {
+              backgroundColor: "Black", 
+              color: "Red",
+              boxShadow: "0px 2px 4px rgba(0, 0, 0, 0.24)",
+            },
+          }}
+        >
+          <Tab
+            label="Home"
+            onClick={() => router.push("/home")}
+            sx={{
+              color: value === 0 ?   "Black": "white",
+              fontWeight: value === 0 ? "bold" : "normal",
+            }}
+          />
+          <Tab
+            label="About" 
+            sx={{
+              color: value === 1 ? "Black": "white",
+              fontWeight: value === 1 ? "bold" : "normal",
+            }}
+          />
           <Tab
             label="Product"
             aria-controls="product-menu"
             aria-haspopup="true"
             onClick={handleProductTabClick}
+            sx={{
+              color: value === 2 ? "Black": "white",
+              fontWeight: value === 2 ? "bold" : "normal",
+            }}
           />
-          <Tab label="Services" onClick={() => router.push("/services")} />
-          <Tab label="Contact" onClick={() => router.push("/contact")} />
+          <Tab
+            label="Services"
+             
+            sx={{
+              color: value === 3 ? "Black": "white",
+              fontWeight: value === 3 ? "bold" : "normal",
+            }}
+          />
+          <Tab
+            label="Contact"
+             
+            sx={{
+              color: value === 4 ? "Black": "white",
+              fontWeight: value === 4 ? "bold" : "normal",
+            }}
+          />
         </Tabs>
 
         {/* Dropdown menu for "Product" */}
@@ -72,15 +113,9 @@ function NavBar() {
           open={Boolean(anchorEl)}
           onClose={handleMenuClose}
         >
-          <MenuItem onClick={() => handleMenuItemClick("/product/car")}>
-            Car
-          </MenuItem>
-          <MenuItem onClick={() => handleMenuItemClick("/product/bikes")}>
-            Bikes
-          </MenuItem>
-          <MenuItem onClick={() => handleMenuItemClick("/product/vans")}>
-            Vans
-          </MenuItem>
+          <MenuItem  >Car</MenuItem>
+          <MenuItem  >Bikes</MenuItem>
+          <MenuItem  >Vans</MenuItem>
         </Menu>
       </Toolbar>
     </AppBar>
