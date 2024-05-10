@@ -8,7 +8,7 @@ function Footer() {
         <React.Fragment>
             <AppBar position="fixed" color="primary" sx={{ top: 'auto', bottom: 0, height:"40px" }}>
                 <Toolbar sx={{
-                    backgroundColor: "#c3c7a7",
+                    backgroundColor: "#9FE2BF",
                     fontFamily: "Inter",
                     fontWeight: 400,
                     fontSize: "14px",
