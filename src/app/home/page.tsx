@@ -2,6 +2,7 @@
 import React from "react";
 import { Table, TableBody, TableCell, TableContainer, TableHead, TableRow, Paper, Avatar, TablePagination, IconButton, Typography, Divider } from '@mui/material';
 import { GridOn as GridIcon } from '@mui/icons-material';
+import ViewCompactIcon from '@mui/icons-material/ViewCompact';
 
 // Dummy data for demonstration
 const dummyData = [
@@ -10,6 +11,7 @@ const dummyData = [
   { id: 3, firstName: 'Jane', lastName: 'Smith', email: 'jane.smith@example.com', dateOfJoining: '2022-02-01', imageUrl: null },
   { id: 4, firstName: 'Jane', lastName: 'Smith', email: 'jane.smith@example.com', dateOfJoining: '2022-02-01', imageUrl: null },
   { id: 5, firstName: 'Jane', lastName: 'Smith', email: 'jane.smith@example.com', dateOfJoining: '2022-02-01', imageUrl: null },
+  { id: 6, firstName: 'Jane', lastName: 'Smith', email: 'jane.smith@example.com', dateOfJoining: '2022-02-01', imageUrl: null }
   // Add more dummy data as needed
 ];
 
@@ -35,6 +37,7 @@ function Home() {
         Employee 
       </Typography>
       <Divider />
+      <ViewCompactIcon />
       <IconButton style={{ position: 'absolute', top: 10, right: 0 }}>
         <GridIcon />
       </IconButton>
@@ -42,16 +45,16 @@ function Home() {
         <Table>
           <TableHead>
             <TableRow>
-              <TableCell style={{ backgroundColor: '#F08000', height: '30px' }}>Image</TableCell>
-              <TableCell style={{ backgroundColor: '#F08000', height: '30px' }}>Last Name</TableCell>
-              <TableCell style={{ backgroundColor: '#F08000', height: '30px' }}>First Name</TableCell>
-              <TableCell style={{ backgroundColor: '#F08000', height: '30px' }}>Email ID</TableCell>
-              <TableCell style={{ backgroundColor: '#F08000', height: '30px' }}>Date of Joining</TableCell>
+              <TableCell style={{ backgroundColor: '#FFD580', height: '30px' }}>Image</TableCell>
+              <TableCell style={{ backgroundColor: '#FFD580', height: '30px' }}>Last Name</TableCell>
+              <TableCell style={{ backgroundColor: '#FFD580', height: '30px' }}>First Name</TableCell>
+              <TableCell style={{ backgroundColor: '#FFD580', height: '30px' }}>Email ID</TableCell>
+              <TableCell style={{ backgroundColor: '#FFD580', height: '30px' }}>Date of Joining</TableCell>
             </TableRow>
           </TableHead>
           <TableBody>
             {dummyData.slice(page * rowsPerPage, page * rowsPerPage + rowsPerPage).map((row) => (
-              <TableRow key={row.id}>
+              <TableRow key={row.id}  >
                 <TableCell>
                   {row.imageUrl ? (
                     <Avatar alt={`${row.firstName} ${row.lastName}`} src={row.imageUrl} />

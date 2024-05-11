@@ -12,3 +12,21 @@ body{
   align-items: center;
   height: 100vh; /* Adjust this if you want different height */
 }
+/* Global styles for all table rows */
+tr {
+  background-color: #ffffff; /* Set background color for all table rows */
+}
+
+/* Global styles for all table cells */
+td, th {
+  padding: 4px; /* Reduce padding to decrease height of table cells */
+  border: 1px solid #ccc; /* Add border to all table cells */
+}
+
+/* Global style for odd table rows */
+tr:nth-child(odd) {
+  background-color: #f0f0f0; /* Set background color for odd table rows */
+}
+
+ 
+
