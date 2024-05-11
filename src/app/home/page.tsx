@@ -32,7 +32,7 @@ function Home() {
   return (
     <div style={{ marginTop: "150px", padding: "0 20px", marginBottom: "20px" }}>
       <Typography variant="h4" gutterBottom>
-       Employee 
+        Employee 
       </Typography>
       <Divider />
       <IconButton style={{ position: 'absolute', top: 10, right: 0 }}>
@@ -42,11 +42,11 @@ function Home() {
         <Table>
           <TableHead>
             <TableRow>
-              <TableCell>Image</TableCell>
-              <TableCell>Last Name</TableCell>
-              <TableCell>First Name</TableCell>
-              <TableCell>Email ID</TableCell>
-              <TableCell>Date of Joining</TableCell>
+              <TableCell style={{ backgroundColor: '#F08000', height: '30px' }}>Image</TableCell>
+              <TableCell style={{ backgroundColor: '#F08000', height: '30px' }}>Last Name</TableCell>
+              <TableCell style={{ backgroundColor: '#F08000', height: '30px' }}>First Name</TableCell>
+              <TableCell style={{ backgroundColor: '#F08000', height: '30px' }}>Email ID</TableCell>
+              <TableCell style={{ backgroundColor: '#F08000', height: '30px' }}>Date of Joining</TableCell>
             </TableRow>
           </TableHead>
           <TableBody>

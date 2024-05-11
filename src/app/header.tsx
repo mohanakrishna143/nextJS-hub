@@ -19,10 +19,9 @@ const Header = () => {
   // const userName= useAppSelector((state) => state.authReducer.value.username);
   // const isLoggedIn= useAppSelector((state) => state.authReducer.value.isLoginStatus); 
   const loginDetails = useAppSelector((state) => ({
-    userName: state.authReducer.value.username,
-    isLoginStatus: state.authReducer.value.isLoginStatus
+    userName: state.auth.value.username,
+    isLoginStatus: state.auth.value.isLoginStatus
   }));
-
   console.log("--test-------", loginDetails)
   const handleLogout = () => {
     // Perform logout actions here, such as clearing local storage, resetting state, etc.
@@ -33,8 +32,8 @@ const Header = () => {
   };
   return (
     <>
-      <AppBar position="fixed" color="primary" sx={{ top: 0, bottom: 'auto', backgroundColor: "#00A36C", textAlign: "center", height: "30px" }}>
-        <Toolbar sx={{ position: "fixed", left: 0, top: 0, right: 0, backgroundColor: "#00A36C", fontFamily: "Inter", fontWeight: 400, fontSize: "5px", display: "flex", justifyContent: "left", minHeight: "30px" }}>
+      <AppBar position="fixed" color="primary" sx={{ top: 0, bottom: 'auto', backgroundColor: "#CD7F32", textAlign: "center", height: "30px" }}>
+        <Toolbar sx={{ position: "fixed", left: 0, top: 0, right: 0, backgroundColor: "#CD7F32", fontFamily: "Inter", fontWeight: 400, fontSize: "5px", display: "flex", justifyContent: "left", minHeight: "30px" }}>
           <Typography variant="body2" align="right" sx={{ color: "#00ff00", fontWeight: "bold", fontSize: "20px" }}>
             <ImportContactsIcon sx={{ color: "#00ff00", fontSize: "50px" }} /> <span style={{ color: "#00ff00", fontSize: "30px" }}>Knowledge</span> <span style={{ color: "#ffffff", fontWeight: "bold", textShadow: "1px 1px 2px black", fontSize: "30px" }}>Hub</span>
           </Typography>

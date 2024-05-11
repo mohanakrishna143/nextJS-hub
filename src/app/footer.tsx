@@ -8,15 +8,15 @@ function Footer() {
         <React.Fragment>
             <AppBar position="fixed" color="primary" sx={{ top: 'auto', bottom: 0, height:"40px" }}>
                 <Toolbar sx={{
-                    backgroundColor: "#9FE2BF",
+                    backgroundColor: "#FFD580",
                     fontFamily: "Inter",
                     fontWeight: 400,
                     fontSize: "14px",
                     minHeight: "20px",
                     justifyContent: "right" // Centering the text horizontally
                 }}>
-                    <Typography variant="body2" color="#fff">
-                        Copyright © www.knowledgub.com 2024.
+                    <Typography variant="body2" color="black">
+                        Copyright © www.knowledghub.com 2024.
                     </Typography>
                 </Toolbar>
             </AppBar>

@@ -14,7 +14,7 @@ import { useRouter } from "next/navigation";
 import { useAppSelector } from "@/redux/store";
 
 function NavBar() {
-  const userName = useAppSelector((state) => state.authReducer.value.username);
+  const userName = useAppSelector((state) => state.auth.value.username);
   const router = useRouter();
   const [value, setValue] = useState(0);
   const [anchorEl, setAnchorEl] = useState(null);
@@ -41,7 +41,7 @@ function NavBar() {
   };
 
   return (
-    <AppBar position="fixed" color="primary" sx={{ top: 64, backgroundColor: "#2AAA8A" }}>
+    <AppBar position="fixed" color="primary" sx={{ top: 64, backgroundColor: "#FFAC1C" }}>
       <Toolbar>
         {/* App Name/Logo */}
         {userName && (
