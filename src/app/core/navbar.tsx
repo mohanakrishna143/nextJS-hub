@@ -64,8 +64,8 @@ function NavBar() {
           }}
         >
           <Tab
-            label="Home"
-            onClick={() => router.push("/home")}
+            label="Employees"
+            onClick={() => router.push("/employee")}
             sx={{
               color: value === 0 ?   "Black": "white",
               fontWeight: value === 0 ? "bold" : "normal",

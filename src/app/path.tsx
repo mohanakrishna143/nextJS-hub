@@ -6,7 +6,10 @@ const paths = {
         return '/signup';
     },
     homePage(){
-      return '/home'
+      return '/employee'
+    } ,
+    employeeDetailsPage(){
+      return '/employeedetails'
     }
   };
   
