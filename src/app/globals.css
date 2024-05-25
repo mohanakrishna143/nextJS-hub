@@ -1,32 +1,33 @@
+/* globals.css */
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
-
-body{
+body {
   background-color: #f1f5f9;
 }
+
 .centered {
   display: flex;
   justify-content: center;
   align-items: center;
-  height: 100vh; /* Adjust this if you want different height */
+  height: 100vh;
 }
-/* Global styles for all table rows */
+
 tr {
-  background-color: #ffffff; /* Set background color for all table rows */
+  background-color: #ffffff;
 }
 
-/* Global styles for all table cells */
 td, th {
-  padding: 4px; /* Reduce padding to decrease height of table cells */
-  border: 1px solid #ccc; /* Add border to all table cells */
+  padding: 4px;
+  border: 1px solid #ccc;
 }
 
-/* Global style for odd table rows */
 tr:nth-child(odd) {
-  background-color: #f0f0f0; /* Set background color for odd table rows */
+  background-color: #f0f0f0;
 }
 
- 
-
+/* Add padding to the top of the content to account for the header height */
+.content-container {
+  padding-top: 64px; /* Adjust this value to match the height of your header */
+}

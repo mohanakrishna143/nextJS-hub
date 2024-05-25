@@ -56,7 +56,7 @@ function EmployeeDetails() {
   }
 
   return (
-    <Box display="flex" justifyContent="center" alignItems="center" height="100vh">
+    <Box display="flex" justifyContent="left" alignItems="center" height="85vh"  sx={{ paddingLeft: '20px'}}>
       <Paper elevation={3} style={{ padding: '20px', maxWidth: '400px', textAlign: 'center' }}>
         <Avatar
           alt={`${employee.firstName} ${employee.lastName}`}
