@@ -4,8 +4,7 @@ import "./globals.css";
 import Header from "./header";
 import Footer from "./footer";  
 import Container from "./container";
-import { ReduxProvider } from "@/redux/provider";
-import NavBar from "./core/navbar";
+import { ReduxProvider } from "@/redux/provider"; 
 
 const inter = Inter({ subsets: ["latin"] });
 

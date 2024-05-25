@@ -1,10 +1,10 @@
-"use client"
-import React, { useState } from "react";
+"use client";
+import React, { useState } from "react"; 
 import { Table, TableBody, TableCell, TableContainer, TableHead, TableRow, Paper, Avatar, TablePagination, IconButton, Typography, Divider } from '@mui/material';
 import { GridOn as GridIcon, ViewCompact as ViewCompactIcon } from '@mui/icons-material';
 import TocIcon from '@mui/icons-material/Toc';
-import Rating from '@mui/material/Rating'; // Import the Rating component
-import Link from "next/link";
+import Rating from '@mui/material/Rating';
+import { useRouter } from "next/navigation";
 
 // Dummy data for demonstration
 const dummyData = [
@@ -18,6 +18,8 @@ const dummyData = [
 ];
 
 function Home() {
+  const router = useRouter(); // Initialize useRouter
+
   // Pagination state
   const [page, setPage] = useState(0);
   const [rowsPerPage, setRowsPerPage] = useState(5);
@@ -39,16 +41,17 @@ function Home() {
     setGridView(!gridView);
   };
 
-   function toEmployeeDetails(){
-    console.log("-----EmployeeDetails---")
-  }
+  const toEmployeeDetails = (row: { id: number; firstName: string; lastName: string; email: string; dateOfJoining: string; imageUrl: string; avgRating: number; } | { id: number; firstName: string; lastName: string; email: string; dateOfJoining: string; imageUrl: null; avgRating: number; }) => {
+    router.push(`/employeedetails/${row.id}`); // Navigate to the employee details page
+  };
+
   return (
     <div style={{ marginTop: "150px", padding: "0 20px", marginBottom: "20px", position: 'relative' }}>
       <Typography variant="h4" gutterBottom>
         Employee
       </Typography>
       <Divider />
-      <IconButton style={{ position: 'absolute', top: 10, right: '1%', }}>
+      <IconButton style={{ position: 'absolute', top: 10, right: '1%' }}>
         {!gridView && <ViewCompactIcon onClick={toggleView} fontSize="large" />}
         {gridView && <TocIcon onClick={toggleView} fontSize="large" />}
       </IconButton>
@@ -58,13 +61,9 @@ function Home() {
           {dummyData.map((employee) => (
             <div key={employee.id} style={{ position: 'relative' }}>
               {employee.imageUrl ? (
-                <Avatar alt={`${employee.firstName} ${employee.lastName}`}
-                  src={employee.imageUrl}
-                  style={{ cursor: 'pointer', marginTop: "20px" }}
-                  title={`${employee.firstName} ${employee.lastName}`} />
+                <Avatar alt={`${employee.firstName} ${employee.lastName}`} src={employee.imageUrl} style={{ cursor: 'pointer', marginTop: "20px" }} title={`${employee.firstName} ${employee.lastName}`} />
               ) : (
-                <Avatar style={{ cursor: 'pointer', marginTop: "20px" }}
-                  title={`${employee.firstName} ${employee.lastName}`} >{`${employee.firstName.charAt(0)}${employee.lastName.charAt(0)}`}</Avatar>
+                <Avatar style={{ cursor: 'pointer', marginTop: "20px" }} title={`${employee.firstName} ${employee.lastName}`}>{`${employee.firstName.charAt(0)}${employee.lastName.charAt(0)}`}</Avatar>
               )}
               <Typography
                 variant="body2"
@@ -72,7 +71,6 @@ function Home() {
               >
               </Typography>
             </div>
-
           ))}
         </div>
       ) : (
@@ -99,8 +97,8 @@ function Home() {
                       <Avatar sizes="large">{`${row.firstName.charAt(0)}${row.lastName.charAt(0)}`}</Avatar>
                     )}
                   </TableCell>
-                  <TableCell style={{ color: 'blue',cursor:"pointer" }} onClick={toEmployeeDetails}> 
-                      {row.lastName}  
+                  <TableCell style={{ color: 'blue', cursor: "pointer" }} onClick={() => toEmployeeDetails(row)}>
+                    {row.lastName}
                   </TableCell>
                   <TableCell>{row.firstName}</TableCell>
                   <TableCell>{row.email}</TableCell>
