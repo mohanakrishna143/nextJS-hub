@@ -10,6 +10,9 @@ const paths = {
     } ,
     employeeDetailsPage(){
       return '/employeedetails'
+    },
+    employeeDetailsPageById(id: any){
+      return `/employeedetails/${id}`
     }
   };
   

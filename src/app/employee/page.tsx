@@ -8,12 +8,12 @@ import { useRouter } from "next/navigation";
 
 // Dummy data for demonstration
 const dummyData = [
-  { id: 1, firstName: 'Mohana', lastName: 'Krishna', email: 'john.doe@example.com', dateOfJoining: '2022-01-01', imageUrl: '/01.jpg', avgRating: 5 },
-  { id: 2, firstName: 'Narayana', lastName: 'Akkili', email: 'gee.kri@example.com', dateOfJoining: '2022-02-01', imageUrl: '/02.jpg', avgRating: 4.5 },
-  { id: 3, firstName: 'Madhu', lastName: 'RK', email: 'jane.smith@example.com', dateOfJoining: '2022-02-01', imageUrl: null, avgRating: 3 },
-  { id: 4, firstName: 'Ravi', lastName: 'RK', email: 'jane.smith@example.com', dateOfJoining: '2022-02-01', imageUrl: null, avgRating: 2 },
-  { id: 5, firstName: 'Syam', lastName: 'Turi', email: 'jane.smith@example.com', dateOfJoining: '2022-02-01', imageUrl: null, avgRating: 1.5 },
-  { id: 6, firstName: 'Sharan', lastName: 'Teja', email: 'jane.smith@example.com', dateOfJoining: '2022-02-01', imageUrl: null, avgRating: 0 }
+  { id: 1, firstName: 'Mohana', lastName: 'Krishna', email: 'mktellakula@criyaa.com', dateOfJoining: '2022-01-01', imageUrl: '/01.jpg', avgRating: 5 },
+  { id: 2, firstName: 'Narayana', lastName: 'Akkili', email: 'narayanaAkkili@criyaa.com', dateOfJoining: '2022-02-01', imageUrl: '/02.jpg', avgRating: 4.5 },
+  { id: 3, firstName: 'Madhu', lastName: 'RK', email: 'madhurk@criyaa.com', dateOfJoining: '2022-02-01', imageUrl: null, avgRating: 3 },
+  { id: 4, firstName: 'Ravi', lastName: 'RK', email: 'ravirk@criyaa.com', dateOfJoining: '2022-02-01', imageUrl: null, avgRating: 2 },
+  { id: 5, firstName: 'Syam', lastName: 'Turi', email: 'sturai@criyaa.com', dateOfJoining: '2022-02-01', imageUrl: null, avgRating: 1.5 },
+  { id: 6, firstName: 'Sharan', lastName: 'Teja', email: 'steja@criyaa.com', dateOfJoining: '2022-02-01', imageUrl: null, avgRating: 0 }
   // Add more dummy data as needed
 ];
 
