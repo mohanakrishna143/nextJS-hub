@@ -61,9 +61,11 @@ function Home() {
           {dummyData.map((employee) => (
             <div key={employee.id} style={{ position: 'relative' }}>
               {employee.imageUrl ? (
-                <Avatar alt={`${employee.firstName} ${employee.lastName}`} src={employee.imageUrl} style={{ cursor: 'pointer', marginTop: "20px" }} title={`${employee.firstName} ${employee.lastName}`} />
+                <Avatar alt={`${employee.firstName} ${employee.lastName}`} src={employee.imageUrl} style={{ cursor: 'pointer', marginTop: "20px" }} title={`${employee.firstName} ${employee.lastName}`} 
+                onClick={() => toEmployeeDetails(employee)}/>
               ) : (
-                <Avatar style={{ cursor: 'pointer', marginTop: "20px" }} title={`${employee.firstName} ${employee.lastName}`}>{`${employee.firstName.charAt(0)}${employee.lastName.charAt(0)}`}</Avatar>
+                <Avatar style={{ cursor: 'pointer', marginTop: "20px" }} title={`${employee.firstName} ${employee.lastName}`}
+                onClick={() => toEmployeeDetails(employee)}>{`${employee.firstName.charAt(0)}${employee.lastName.charAt(0)}`}</Avatar>
               )}
               <Typography
                 variant="body2"

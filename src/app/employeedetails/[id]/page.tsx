@@ -2,6 +2,7 @@
 import React, { useEffect, useState } from "react";
 import { Typography, Avatar, Paper, Box, CircularProgress } from "@mui/material";
 import { useParams } from "next/navigation"; // Import useParams from next/navigation
+import KeyboardBackspaceIcon from '@mui/icons-material/KeyboardBackspace';
 
 // Dummy data for demonstration
 interface Employee {
@@ -56,8 +57,14 @@ function EmployeeDetails() {
   }
 
   return (
-    <Box display="flex" justifyContent="left" alignItems="center" height="85vh"  sx={{ paddingLeft: '20px'}}>
+    <Box display="flex" justifyContent="left" alignItems="center" height="90vh" sx={{ paddingLeft: '20px' }}>
       <Paper elevation={3} style={{ padding: '20px', maxWidth: '400px', textAlign: 'center' }}>
+        <Box display="flex" alignItems="center" justifyContent="flex-start" mb={2}>
+          <KeyboardBackspaceIcon  />
+          <Typography variant="body1" style={{ marginLeft: '8px' }}>
+            Back
+          </Typography>
+        </Box>
         <Avatar
           alt={`${employee.firstName} ${employee.lastName}`}
           src={employee.imageUrl || ""}
